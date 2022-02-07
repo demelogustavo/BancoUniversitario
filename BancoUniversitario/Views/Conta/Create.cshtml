@@ -1,0 +1,33 @@
+﻿@model BancoUniversitario.ViewModels.ContaViewModel
+
+@{
+    ViewData["Title"] = "Cadastro de Conta";
+}
+
+<h1>Cadastro de Conta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="NumeroDaConta" class="control-label"></label>
+                <input asp-for="NumeroDaConta" class="form-control" />
+                <span asp-validation-for="NumeroDaConta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

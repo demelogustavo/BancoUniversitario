@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\demel\\source\\repos\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj": {}
+    "C:\\Users\\demel\\Downloads\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\demel\\source\\repos\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj": {
+    "C:\\Users\\demel\\Downloads\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\demel\\source\\repos\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj",
+        "projectUniqueName": "C:\\Users\\demel\\Downloads\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj",
         "projectName": "BancoUniversitario",
-        "projectPath": "C:\\Users\\demel\\source\\repos\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj",
+        "projectPath": "C:\\Users\\demel\\Downloads\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario.csproj",
         "packagesPath": "C:\\Users\\demel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\demel\\source\\repos\\BancoUniversitario\\BancoUniversitario\\obj\\",
+        "outputPath": "C:\\Users\\demel\\Downloads\\BancoUniversitario\\BancoUniversitario\\BancoUniversitario\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -41,28 +41,44 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[6.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.11, )"
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -75,12 +91,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
