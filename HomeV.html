@@ -1,0 +1,68 @@
+@model BancoUniversitario.ViewModels.HomeViewModel
+<div class="container">
+    @*<div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+
+                </li>
+                <li class="nav-item">
+
+                </li>
+            </ul>
+        </nav>
+    </div>*@
+    @if (TempData["erro"] != null)
+    {
+        <div class="alert-danger">
+            <label class="alert">@Html.Raw(TempData["erro"])</label>
+        </div>
+    }
+    @if (TempData["sucesso"] != null)
+    {
+        <div class="alert-success">
+            <label class="alert">@Html.Raw(TempData["sucesso"])</label>
+        </div>
+    }
+    <h1 class="display-3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Nº de conta:</h1>
+    <div class="jumbotron" style="line-height: 20px; font-weight: 400; width: 705px; height: 46px;" contenteditable="true" spellcheckker="false">
+        @Html.DisplayFor(model=>model.NumeroDaConta)
+        <p>
+
+        </p>
+    </div>
+    <h1 class="display-3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Saldo:</h1>
+    <div class="jumbotron" style="line-height: 20px; font-weight: 400; width: 705px; height: 46px;">
+        @Html.DisplayFor(model=>model.Saldo)
+    </div>
+    <div>
+        <form asp-controller="Conta" asp-action="ProcessarMovimentacao">
+
+            @* <a class="btn btn-lg btn-success" href="#" role="button">
+                <div class="form-group" style="">
+                <label>Sacar:&nbsp;</label>
+                <input type="text" class="form-control" id="ValorSaque"name="Valor"/>
+                </div>
+                </a>*@
+            <div class="form-group">
+                <div class="col-sm-3">
+
+                    <label>Tipo da movimentação:</label>
+                    <select class="form-control" asp-for="TipoMovimentacao" asp-items="Html.GetEnumSelectList<TipoMovimentacaoEnum>()">
+                        <option selected="selected" value="">-- Selecione</option>
+                    </select>
+                </div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="#" role="button">
+                <div class="form-group" style="">
+                    <label>Digite o valor</label>
+                    <input type="text" class="form-control" id="Valor" name="Valor" />
+                </div>
+            </a>
+
+            <button type="submit" class="btn btn-primary" style="line-height: 25.25px; letter-spacing: 10.25px; background-color: rgb(204, 0, 167);">Submeter</button>
+        </form>
+    </div>

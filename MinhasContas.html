@@ -1,0 +1,39 @@
+@model IEnumerable<BancoUniversitario.ViewModels.ContaViewModel>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Minhas contas</h1>
+
+<p>
+    <a asp-action="Create">Nova conta</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroDaConta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroDaConta)
+            </td>
+            <td>
+                @Html.ActionLink("Excluir", "Delete", new {  id=item.Id  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
